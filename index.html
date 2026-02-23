@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myth as Knowledge | Hanna Bullen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --bg: #0a0a0a;
+            --text: #e5e5e5;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .serif { font-family: 'Crimson Pro', serif; }
+
+        /* Animation logic: Elements "slide up" when they enter the screen */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.8) 70%, #0a0a0a 100%);
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.4s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 
+      NAVIGATION BAR 
+      Edit the text in the <span> tags below to change the site name or your name.
+    -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-start mix-blend-difference pointer-events-none">
+        <a href="#" class="pointer-events-auto flex flex-col group transition-opacity hover:opacity-80">
+            <span class="text-sm md:text-lg font-light tracking-[0.2em] uppercase serif italic">Myth as Knowledge</span>
+            <span class="text-[8px] md:text-[10px] tracking-[0.4em] uppercase opacity-70 mt-1">Hanna Bullen</span>
+        </a>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.4em] font-medium pointer-events-auto pt-2">
+            <a href="#introduction" class="nav-link">Introduction</a>
+            <a href="#artifact-japan" class="nav-link">Japan</a>
+            <a href="#artifact-greece" class="nav-link">Greece</a>
+            <a href="#artifact-maori" class="nav-link">Māori</a>
+        </div>
+    </nav>
+
+    <!-- 
+      HERO SECTION (The very top of the page)
+      Change the 'src' link below to change the main background image.
+    -->
+    <header id="top" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- EDIT HERO IMAGE HERE -->
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000" 
+                 class="w-full h-full object-cover opacity-30" alt="Exhibition Background">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl">
+            <h2 class="text-[#c5a059] uppercase tracking-[0.5em] text-[10px] md:text-xs mb-6 font-bold">An Online Exhibition</h2>
+            <h1 class="text-6xl md:text-9xl mb-8 serif font-extralight italic leading-none tracking-tight">Myth as Knowledge</h1>
+            <p class="text-sm md:text-lg font-light opacity-60 max-w-xl mx-auto tracking-wide">
+                Reconsidering myth as a cultural technology for environmental preservation.
+            </p>
+            <div class="mt-20">
+                <div class="w-[1px] h-16 bg-white/20 mx-auto"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 
+      INTRODUCTION SECTION 
+      Edit the <p> tags below to change your text content.
+    -->
+    <section id="introduction" class="py-32 md:py-56 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal">
+                <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-12">I. The Modern Divide</p>
+                <h2 class="text-3xl md:text-5xl mb-16 serif italic leading-tight text-white/90">
+                    In the modern Western world, myth is often understood as the opposite of truth.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 text-lg font-light leading-relaxed text-white/70">
+                <div class="reveal space-y-8">
+                    <p>It is associated with fiction, imagination, and stories that belong to a distant and less rational past. Scientific reasoning has become the dominant framework for understanding reality.</p>
+                    <p>Yet this way of thinking represents a relatively recent shift. For most of human existence, myth was one of the primary ways societies preserved essential information about survival.</p>
+                </div>
+                <div class="reveal space-y-8" style="transition-delay: 200ms;">
+                    <p>Before the rise of scientific rationalism, many cultures understood reality through interconnected spiritual and ecological systems.</p>
+                    <p>Myth served as a <span class="text-[#c5a059] italic">bridge</span> between observation and meaning, encoding environmental experience into narratives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      CASE STUDY 01: JAPAN (Tsunami Stone) 
+    -->
+    <section id="artifact-japan" class="py-32 md:py-64 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal order-2 lg:order-1">
+                <div class="relative group">
+                    <!-- EDIT JAPAN ARTIFACT IMAGE HERE -->
+                    <img src="https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Tsunami Stone" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 border-b border-r border-[#c5a059]/40"></div>
+                </div>
+            </div>
+            <div class="reveal order-1 lg:order-2">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 01</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-8">The Silent Warnings of Aneyoshi</h3>
+                <p class="text-xl font-light text-white/60 mb-8 italic">"Do not build your homes below this point."</p>
+                <p class="font-light leading-relaxed opacity-80 mb-10">
+                    This tsunami stone monument functions as mythic memory without narrative imagery, encoding lived experience into a warning meant to outlast generations.
+                </p>
+                <div class="pt-8 border-t border-white/10 flex space-x-12">
+                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Status</p><p class="text-xs font-light">Surviving Memory</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Location</p><p class="text-xs font-light">Coastal Japan</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      CASE STUDY 02: GREECE (Flood Myth) 
+      This section has a background image.
+    -->
+    <section id="artifact-greece" class="relative py-48 md:py-80 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- EDIT GREECE BACKGROUND IMAGE HERE -->
+            <img src="https://images.unsplash.com/photo-1505506005746-a35675171dd0?auto=format&fit=crop&q=80&w=2000" 
+                 class="w-full h-full object-cover opacity-20" alt="Greek Flood Context">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <div class="reveal">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 02</span>
+                <h3 class="text-5xl md:text-7xl serif italic mb-12">Deucalion & Pyrrha</h3>
+                <p class="text-lg md:text-2xl font-light italic leading-relaxed opacity-90 max-w-2xl mx-auto mb-16">
+                    "The story preserved collective memory of flooding, moral causality, and renewal, without scientific hydrology."
+                </p>
+                <div class="w-px h-24 bg-[#c5a059]/40 mx-auto"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      CASE STUDY 03: MAORI (Maui Myth) 
+    -->
+    <section id="artifact-maori" class="py-32 md:py-64 px-6 bg-zinc-950/20">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+            <div class="reveal lg:w-1/2">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 03</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-8">Māui & the Great Catch</h3>
+                <p class="font-light leading-relaxed opacity-80 mb-10">
+                    Māui fishing up the North Island transforms natural phenomena into actionable knowledge, serving as both cultural memory and behavioral guidance.
+                </p>
+                <div class="p-6 border border-[#c5a059]/20 bg-zinc-900/50 italic font-light text-sm">
+                    "Linking story, memory, and practical societal knowledge."
+                </div>
+            </div>
+            <div class="reveal lg:w-1/2">
+                <div class="aspect-square bg-zinc-900 overflow-hidden relative group border border-white/5">
+                    <!-- EDIT MAORI IMAGE HERE -->
+                    <img src="https://images.unsplash.com/photo-1502472545331-643bb21a89ec?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Māori Myth Visualization" class="w-full h-full object-cover opacity-60">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL FOOTER AREA -->
+    <footer class="py-24 px-6 border-t border-white/5 text-center">
+        <div class="max-w-3xl mx-auto reveal">
+            <h4 class="text-2xl md:text-4xl serif italic mb-12 opacity-80">"Myth is part of a longer continuum of human efforts to survive."</h4>
+            <p class="text-[10px] uppercase tracking-[0.5em] opacity-30 mt-12">Hanna Bullen &bull; 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Logic to make items "appear" as you scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll for the navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
