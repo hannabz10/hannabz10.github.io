@@ -24,7 +24,6 @@
 
         .serif { font-family: 'Crimson Pro', serif; }
 
-        /* Animation logic: Elements "slide up" when they enter the screen */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -62,14 +61,39 @@
         ::-webkit-scrollbar-track { background: #0a0a0a; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+        /* AI Curator Sidebar Styles */
+        #ai-curator-panel {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #ai-curator-panel.open {
+            transform: translateX(0);
+        }
+        .chat-bubble {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .curator-bubble {
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            color: var(--text);
+            align-self: flex-start;
+        }
+        .user-bubble {
+            background: rgba(255, 255, 255, 0.05);
+            align-self: flex-end;
+            color: white;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- 
-      NAVIGATION BAR 
-      Edit the text in the <span> tags below to change the site name or your name.
-    -->
+    <!-- NAVIGATION BAR -->
     <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-start mix-blend-difference pointer-events-none">
         <a href="#" class="pointer-events-auto flex flex-col group transition-opacity hover:opacity-80">
             <span class="text-sm md:text-lg font-light tracking-[0.2em] uppercase serif italic">Myth as Knowledge</span>
@@ -83,13 +107,9 @@
         </div>
     </nav>
 
-    <!-- 
-      HERO SECTION (The very top of the page)
-      Change the 'src' link below to change the main background image.
-    -->
+    <!-- HERO SECTION -->
     <header id="top" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <!-- EDIT HERO IMAGE HERE -->
             <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000" 
                  class="w-full h-full object-cover opacity-30" alt="Exhibition Background">
             <div class="absolute inset-0 hero-overlay"></div>
@@ -107,40 +127,54 @@
         </div>
     </header>
 
-    <!-- 
-      INTRODUCTION SECTION 
-      Edit the <p> tags below to change your text content.
-    -->
-    <section id="introduction" class="py-32 md:py-56 px-6">
+    <!-- INTRODUCTION SECTION -->
+    <section id="introduction" class="py-24 md:py-48 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="reveal">
-                <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-12">I. The Modern Divide</p>
-                <h2 class="text-3xl md:text-5xl mb-16 serif italic leading-tight text-white/90">
-                    In the modern Western world, myth is often understood as the opposite of truth.
+                <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-10">I. The Modern Divide</p>
+                <h2 class="text-3xl md:text-5xl mb-16 serif italic leading-tight text-white/95">
+                    "In the modern Western world, myth is often understood as the opposite of truth."
                 </h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 text-lg font-light leading-relaxed text-white/70">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 text-lg font-light leading-relaxed text-white/80 mb-32">
                 <div class="reveal space-y-8">
-                    <p>It is associated with fiction, imagination, and stories that belong to a distant and less rational past. Scientific reasoning has become the dominant framework for understanding reality.</p>
-                    <p>Yet this way of thinking represents a relatively recent shift. For most of human existence, myth was one of the primary ways societies preserved essential information about survival.</p>
+                    <p>
+                        In the modern Western world, myth is often understood as the opposite of truth. It is associated with fiction, imagination, and stories that belong to a distant and less rational past. In the post-enlightenment world we live in, scientific reasoning has become the dominant framework for understanding reality, encouraging the belief that knowledge must be measurable, observable, and verifiable. 
+                    </p>
+                    <p>
+                        Yet this way of thinking represents a relatively recent shift in human history. For most of human existence, myth was not separate from knowledge, it was one of the primary ways societies understood their world and preserved essential information about existence, nature, and survival.
+                    </p>
                 </div>
                 <div class="reveal space-y-8" style="transition-delay: 200ms;">
-                    <p>Before the rise of scientific rationalism, many cultures understood reality through interconnected spiritual and ecological systems.</p>
-                    <p>Myth served as a <span class="text-[#c5a059] italic">bridge</span> between observation and meaning, encoding environmental experience into narratives.</p>
+                    <p>
+                        Before the rise of scientific rationalism, many cultures understood reality through interconnected spiritual, ecological, and experiential systems. Rather than separating humans from nature, these worldviews positioned human life within a larger, living environment. 
+                    </p>
+                    <p>
+                        Myth served as a <span class="text-[#c5a059] italic">bridge</span> between observation and meaning, transforming environmental experience into narratives that could be remembered and transmitted across generations. These stories were not merely symbolic; they functioned as structured systems for organizing knowledge about natural forces, human vulnerability, and environmental patterns.
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal border-t border-white/10 pt-32">
+                <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-10 text-center">II. Epistemology & Continuity</p>
+                <div class="max-w-2xl mx-auto space-y-12 text-lg md:text-xl font-light leading-relaxed text-white/80">
+                    <p>
+                        Scholars across disciplines have emphasized the importance of myth as a legitimate form of knowledge preservation. Historian of religion <span class="text-white font-normal">Mircea Eliade</span> argued that myth provides a framework through which societies understand reality and their place within it, preserving foundational truths across time. Anthropologist <span class="text-white font-normal">Claude Lévi-Strauss</span> further demonstrated that myth operates as a system of logic, allowing cultures to organize and transmit complex relationships between humans and the natural world. Rather than being irrational, myth reflects a different epistemology, one grounded in memory preservation, experience, continuity, and the spirit realm.
+                    </p>
+                    <p>
+                        This exhibit explores myth as an early system of knowledge preservation that existed before, and alongside, scientific rationalism. It examines how myth functioned not simply as storytelling, but as a cultural technology that encoded environmental understanding and ensured its survival across generations. By reconsidering myth through this lens, this exhibit invites viewers to question the modern assumption that rational science replaced myth entirely. Instead, myth can be understood as part of a longer continuum of human efforts to interpret, preserve, and survive within an ever-changing world.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 
-      CASE STUDY 01: JAPAN (Tsunami Stone) 
-    -->
-    <section id="artifact-japan" class="py-32 md:py-64 px-6">
+    <!-- CASE STUDY 01: JAPAN -->
+    <section id="artifact-japan" class="py-32 md:py-64 px-6 bg-zinc-950/40">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="reveal order-2 lg:order-1">
+            <div class="reveal image-container order-2 lg:order-1">
                 <div class="relative group">
-                    <!-- EDIT JAPAN ARTIFACT IMAGE HERE -->
                     <img src="https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=1000" 
                          alt="Tsunami Stone" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 border-b border-r border-[#c5a059]/40"></div>
@@ -151,7 +185,7 @@
                 <h3 class="text-4xl md:text-6xl serif italic mb-8">The Silent Warnings of Aneyoshi</h3>
                 <p class="text-xl font-light text-white/60 mb-8 italic">"Do not build your homes below this point."</p>
                 <p class="font-light leading-relaxed opacity-80 mb-10">
-                    This tsunami stone monument functions as mythic memory without narrative imagery, encoding lived experience into a warning meant to outlast generations.
+                    This tsunami stone monument functions as mythic memory without narrative imagery, encoding lived experience into a warning meant to outlast generations. It demonstrates how cultural memory guides behavior more effectively than abstract scientific data alone.
                 </p>
                 <div class="pt-8 border-t border-white/10 flex space-x-12">
                     <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Status</p><p class="text-xs font-light">Surviving Memory</p></div>
@@ -161,13 +195,9 @@
         </div>
     </section>
 
-    <!-- 
-      CASE STUDY 02: GREECE (Flood Myth) 
-      This section has a background image.
-    -->
+    <!-- CASE STUDY 02: GREECE -->
     <section id="artifact-greece" class="relative py-48 md:py-80 px-6 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <!-- EDIT GREECE BACKGROUND IMAGE HERE -->
             <img src="https://images.unsplash.com/photo-1505506005746-a35675171dd0?auto=format&fit=crop&q=80&w=2000" 
                  class="w-full h-full object-cover opacity-20" alt="Greek Flood Context">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
@@ -184,9 +214,7 @@
         </div>
     </section>
 
-    <!-- 
-      CASE STUDY 03: MAORI (Maui Myth) 
-    -->
+    <!-- CASE STUDY 03: MAORI -->
     <section id="artifact-maori" class="py-32 md:py-64 px-6 bg-zinc-950/20">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
             <div class="reveal lg:w-1/2">
@@ -201,7 +229,6 @@
             </div>
             <div class="reveal lg:w-1/2">
                 <div class="aspect-square bg-zinc-900 overflow-hidden relative group border border-white/5">
-                    <!-- EDIT MAORI IMAGE HERE -->
                     <img src="https://images.unsplash.com/photo-1502472545331-643bb21a89ec?auto=format&fit=crop&q=80&w=1000" 
                          alt="Māori Myth Visualization" class="w-full h-full object-cover opacity-60">
                 </div>
@@ -213,33 +240,165 @@
     <footer class="py-24 px-6 border-t border-white/5 text-center">
         <div class="max-w-3xl mx-auto reveal">
             <h4 class="text-2xl md:text-4xl serif italic mb-12 opacity-80">"Myth is part of a longer continuum of human efforts to survive."</h4>
-            <p class="text-[10px] uppercase tracking-[0.5em] opacity-30 mt-12">Hanna Bullen &bull; 2024</p>
+            <!-- Updated year to 2026 -->
+            <p class="text-[10px] uppercase tracking-[0.5em] opacity-30 mt-12">Hanna Bullen &bull; 2026</p>
         </div>
     </footer>
 
+    <!-- AI CURATOR WIDGET -->
+    <div id="ai-curator-panel" class="fixed top-0 right-0 h-full w-full md:w-96 bg-zinc-900 z-[100] border-l border-white/10 flex flex-col shadow-2xl">
+        <div class="p-6 border-b border-white/5 flex justify-between items-center bg-zinc-950">
+            <div>
+                <h4 class="serif italic text-xl">Consult the Curator</h4>
+                <p class="text-[10px] uppercase tracking-widest text-[#c5a059]">Exhibition Assistant</p>
+            </div>
+            <button id="close-curator" class="text-white/50 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <div id="chat-messages" class="flex-1 overflow-y-auto p-6 flex flex-col custom-scrollbar">
+            <div class="chat-bubble curator-bubble">
+                Welcome to the exhibit. I am an AI assistant grounded in Hanna Bullen's research. Do you have questions about how these ancient myths served as systems of knowledge?
+            </div>
+        </div>
+
+        <div class="p-4 border-t border-white/10 bg-zinc-950">
+            <div class="relative">
+                <textarea id="user-input" rows="2" placeholder="Ask a question..." 
+                    class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 pr-12 text-sm focus:outline-none focus:border-[#c5a059] transition-colors resize-none"></textarea>
+                <button id="send-btn" class="absolute right-3 bottom-3 text-[#c5a059] hover:text-white transition-colors disabled:opacity-30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-[9px] text-white/30 text-center mt-2 uppercase tracking-tighter">Powered by Gemini 2.5 Flash</p>
+        </div>
+    </div>
+
+    <button id="open-curator" class="fixed bottom-8 right-8 z-[90] bg-zinc-900 border border-[#c5a059]/40 p-4 rounded-full shadow-2xl hover:bg-zinc-800 transition-all group reveal active">
+        <div class="flex items-center space-x-3">
+            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[#c5a059] hidden group-hover:block transition-all">Consult Curator</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c5a059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+        </div>
+    </button>
+
     <script>
-        // Logic to make items "appear" as you scroll
+        // Reveal Logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Smooth scroll for the navigation links
+        // Nav Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
+                else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
+        });
+
+        // AI CURATOR LOGIC
+        const apiKey = ""; // Provisioned at runtime
+        const panel = document.getElementById('ai-curator-panel');
+        const openBtn = document.getElementById('open-curator');
+        const closeBtn = document.getElementById('close-curator');
+        const chatContainer = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        openBtn.addEventListener('click', () => panel.classList.add('open'));
+        closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+        const systemPrompt = `You are the AI Curator for Hanna Bullen's exhibition "Myth as Knowledge" in February 2026. 
+        Your goal is to help visitors understand that myth is not the opposite of truth, but a 'cultural technology' for preserving survival knowledge.
+        
+        KEY KNOWLEDGE BASE:
+        1. Japan (Aneyoshi Stones): Ancient monuments warning against building below a certain point. Villages that followed them survived the 2011 tsunami.
+        2. Greece (Deucalion & Pyrrha): A myth encoding recurring flood cycles and resilience.
+        3. Māori (Māui): The myth of fishing up the North Island encodes geological (volcanic) and ecological (fishing/hazard) understanding.
+        4. Scholars: Mircea Eliade (foundational truths) and Lévi-Strauss (myth as logic).
+        
+        STYLE: Sophisticated, academic yet accessible, calm, and insightful. Keep responses concise (2-3 sentences max unless asked to elaborate). Do not mention you are an AI unless asked.`;
+
+        async function callGemini(query) {
+            let delay = 1000;
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: query }] }],
+                            systemInstruction: { parts: [{ text: systemPrompt }] }
+                        })
+                    });
+                    
+                    if (!response.ok) throw new Error('API request failed');
+                    const data = await response.json();
+                    return data.candidates?.[0]?.content?.parts?.[0]?.text;
+                } catch (err) {
+                    if (i === 4) throw err;
+                    await new Promise(r => setTimeout(r, delay));
+                    delay *= 2;
+                }
+            }
+        }
+
+        async function handleSend() {
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            // User Message
+            const userDiv = document.createElement('div');
+            userDiv.className = 'chat-bubble user-bubble';
+            userDiv.textContent = text;
+            chatContainer.appendChild(userDiv);
+            userInput.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Loading state
+            sendBtn.disabled = true;
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'chat-bubble curator-bubble opacity-50';
+            loadingDiv.textContent = 'Curating response...';
+            chatContainer.appendChild(loadingDiv);
+
+            try {
+                const aiResponse = await callGemini(text);
+                chatContainer.removeChild(loadingDiv);
+                
+                const curatorDiv = document.createElement('div');
+                curatorDiv.className = 'chat-bubble curator-bubble';
+                curatorDiv.textContent = aiResponse;
+                chatContainer.appendChild(curatorDiv);
+            } catch (error) {
+                chatContainer.removeChild(loadingDiv);
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'chat-bubble curator-bubble text-red-400';
+                errorDiv.textContent = "The curator is currently indisposed. Please try again in a moment.";
+                chatContainer.appendChild(errorDiv);
+            } finally {
+                sendBtn.disabled = false;
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+        }
+
+        sendBtn.addEventListener('click', handleSend);
+        userInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSend();
+            }
         });
     </script>
 </body>
