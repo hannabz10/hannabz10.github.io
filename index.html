@@ -20,6 +20,7 @@
             color: var(--text);
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         .serif { font-family: 'Crimson Pro', serif; }
@@ -62,7 +63,27 @@
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-        /* AI Curator Sidebar Styles */
+        /* MLA Hanging Indent for Bibliography */
+        .bib-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .bib-entry {
+            padding-left: 2em;
+            text-indent: -2em;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        .annotation {
+            text-indent: 0;
+            margin-top: 0.5rem;
+            display: block;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
         #ai-curator-panel {
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             transform: translateX(100%);
@@ -99,11 +120,12 @@
             <span class="text-sm md:text-lg font-light tracking-[0.2em] uppercase serif italic">Myth as Knowledge</span>
             <span class="text-[8px] md:text-[10px] tracking-[0.4em] uppercase opacity-70 mt-1">Hanna Bullen</span>
         </a>
-        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.4em] font-medium pointer-events-auto pt-2">
+        <div class="hidden md:flex space-x-8 text-[9px] uppercase tracking-[0.3em] font-medium pointer-events-auto pt-2">
             <a href="#introduction" class="nav-link">Introduction</a>
             <a href="#artifact-japan" class="nav-link">Japan</a>
             <a href="#artifact-greece" class="nav-link">Greece</a>
             <a href="#artifact-maori" class="nav-link">Māori</a>
+            <a href="#bibliography" class="nav-link">Bibliography</a>
         </div>
     </nav>
 
@@ -118,7 +140,7 @@
         <div class="relative z-10 text-center px-4 max-w-5xl">
             <h2 class="text-[#c5a059] uppercase tracking-[0.5em] text-[10px] md:text-xs mb-6 font-bold">An Online Exhibition</h2>
             <h1 class="text-6xl md:text-9xl mb-8 serif font-extralight italic leading-none tracking-tight">Myth as Knowledge</h1>
-            <p class="text-sm md:text-lg font-light opacity-60 max-w-xl mx-auto tracking-wide">
+            <p class="text-sm md:text-lg font-light opacity-60 max-w-xl mx-auto tracking-wide italic">
                 Reconsidering myth as a cultural technology for environmental preservation.
             </p>
             <div class="mt-20">
@@ -127,7 +149,7 @@
         </div>
     </header>
 
-    <!-- INTRODUCTION SECTION -->
+    <!-- INTRODUCTION SECTION (500 WORDS) -->
     <section id="introduction" class="py-24 md:py-48 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="reveal">
@@ -160,7 +182,7 @@
                 <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-10 text-center">II. Epistemology & Continuity</p>
                 <div class="max-w-2xl mx-auto space-y-12 text-lg md:text-xl font-light leading-relaxed text-white/80">
                     <p>
-                        Scholars across disciplines have emphasized the importance of myth as a legitimate form of knowledge preservation. Historian of religion <span class="text-white font-normal">Mircea Eliade</span> argued that myth provides a framework through which societies understand reality and their place within it, preserving foundational truths across time. Anthropologist <span class="text-white font-normal">Claude Lévi-Strauss</span> further demonstrated that myth operates as a system of logic, allowing cultures to organize and transmit complex relationships between humans and the natural world. Rather than being irrational, myth reflects a different epistemology, one grounded in memory preservation, experience, continuity, and the spirit realm.
+                        Scholars across disciplines have emphasized the importance of myth as a legitimate form of knowledge preservation. Historian of religion <span class="text-white font-normal">Mircea Eliade</span> argued that myth provides a framework through which societies understand reality and their place within it, preserving foundational truths across time. Anthropologist <span class="text-white font-normal">Claude Lévi-Strauss</span> further demonstrated that myth operates as a system of logic, allowing cultures to organize and transmit complex relationships between humans and the natural world. Rather than being irrational, myth reflects a different epistemology, one grounded in <span class="text-white font-medium italic underline decoration-gold/50">memory preservation, experience, continuity, and the spirit realm.</span>
                     </p>
                     <p>
                         This exhibit explores myth as an early system of knowledge preservation that existed before, and alongside, scientific rationalism. It examines how myth functioned not simply as storytelling, but as a cultural technology that encoded environmental understanding and ensured its survival across generations. By reconsidering myth through this lens, this exhibit invites viewers to question the modern assumption that rational science replaced myth entirely. Instead, myth can be understood as part of a longer continuum of human efforts to interpret, preserve, and survive within an ever-changing world.
@@ -170,77 +192,122 @@
         </div>
     </section>
 
-    <!-- CASE STUDY 01: JAPAN -->
+    <!-- CASE STUDY 01: JAPAN (Tsunami Stone) -->
     <section id="artifact-japan" class="py-32 md:py-64 px-6 bg-zinc-950/40">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="reveal image-container order-2 lg:order-1">
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=1000" 
-                         alt="Tsunami Stone" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
+                <div class="relative group aspect-[4/5] overflow-hidden border border-white/5">
+                    <!-- Note: If the local file image_f4219e.jpg fails to load, it uses an Unsplash placeholder for the preview -->
+                    <img src="image_f4219e.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=800'"
+                         alt="Tsunami Stone in Aneyoshi" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 border-b border-r border-[#c5a059]/40"></div>
                 </div>
             </div>
             <div class="reveal order-1 lg:order-2">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 01</span>
-                <h3 class="text-4xl md:text-6xl serif italic mb-8">The Silent Warnings of Aneyoshi</h3>
-                <p class="text-xl font-light text-white/60 mb-8 italic">"Do not build your homes below this point."</p>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 01 | Aneyoshi, Japan</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-8">The Tsunami Monument</h3>
+                <p class="text-xl font-light text-white/60 mb-8 italic">"Remember the calamity of the great tsunamis. Do not build any homes below this point."</p>
                 <p class="font-light leading-relaxed opacity-80 mb-10">
-                    This tsunami stone monument functions as mythic memory without narrative imagery, encoding lived experience into a warning meant to outlast generations. It demonstrates how cultural memory guides behavior more effectively than abstract scientific data alone.
+                    A stone monument carved with a warning passed down for generations. The text "addresses" the viewer directly, functioning as a voice from the past rather than depicting a specific person. The stone dominates the frame, standing firmly against the landscape as a permanent authority on environmental survival.
                 </p>
                 <div class="pt-8 border-t border-white/10 flex space-x-12">
-                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Status</p><p class="text-xs font-light">Surviving Memory</p></div>
-                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Location</p><p class="text-xs font-light">Coastal Japan</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Function</p><p class="text-xs font-light">Communal Memory</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Medium</p><p class="text-xs font-light">Engraved Stone</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CASE STUDY 02: GREECE -->
+    <!-- CASE STUDY 02: GREECE (Flood Myth) -->
     <section id="artifact-greece" class="relative py-48 md:py-80 px-6 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1505506005746-a35675171dd0?auto=format&fit=crop&q=80&w=2000" 
-                 class="w-full h-full object-cover opacity-20" alt="Greek Flood Context">
+            <!-- Background logic -->
+            <img src="image_f4215c.jpg" 
+                 onerror="this.src='https://images.unsplash.com/photo-1510521212584-5553a9273c50?auto=format&fit=crop&q=80&w=2000'"
+                 class="w-full h-full object-cover opacity-30" alt="Deucalion and Pyrrha Survivors">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
         </div>
         <div class="relative z-10 max-w-4xl mx-auto text-center">
             <div class="reveal">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 02</span>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 02 | Ancient Greece</span>
                 <h3 class="text-5xl md:text-7xl serif italic mb-12">Deucalion & Pyrrha</h3>
                 <p class="text-lg md:text-2xl font-light italic leading-relaxed opacity-90 max-w-2xl mx-auto mb-16">
-                    "The story preserved collective memory of flooding, moral causality, and renewal, without scientific hydrology."
+                    "This myth preserved collective memory of flooding and renewal long before scientific geology existed. It transformed natural phenomenon into actionable knowledge, reinforcing human resilience."
                 </p>
                 <div class="w-px h-24 bg-[#c5a059]/40 mx-auto"></div>
             </div>
         </div>
     </section>
 
-    <!-- CASE STUDY 03: MAORI -->
+    <!-- CASE STUDY 03: MAORI (Maui Myth) -->
     <section id="artifact-maori" class="py-32 md:py-64 px-6 bg-zinc-950/20">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
             <div class="reveal lg:w-1/2">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 03</span>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 03 | Māori Tradition</span>
                 <h3 class="text-4xl md:text-6xl serif italic mb-8">Māui & the Great Catch</h3>
                 <p class="font-light leading-relaxed opacity-80 mb-10">
-                    Māui fishing up the North Island transforms natural phenomena into actionable knowledge, serving as both cultural memory and behavioral guidance.
+                    The demigod Māui fishing up the North Island (Te Ika-a-Māui). Traditional Māori art highlights sacredness, motion, and drama. This story communicates practical knowledge about fishing, tides, and volcanic activity while reinforcing cultural values and social cohesion.
                 </p>
                 <div class="p-6 border border-[#c5a059]/20 bg-zinc-900/50 italic font-light text-sm">
-                    "Linking story, memory, and practical societal knowledge."
+                    "Human imagination transforms natural phenomena into actionable knowledge, serving as behavioral guidance across generations."
                 </div>
             </div>
             <div class="reveal lg:w-1/2">
-                <div class="aspect-square bg-zinc-900 overflow-hidden relative group border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1502472545331-643bb21a89ec?auto=format&fit=crop&q=80&w=1000" 
-                         alt="Māori Myth Visualization" class="w-full h-full object-cover opacity-60">
+                <div class="aspect-video bg-zinc-900 overflow-hidden relative group border border-white/5 shadow-2xl">
+                    <img src="image_f4211e.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1544413660-299165566b1d?auto=format&fit=crop&q=80&w=1200'"
+                         alt="Māui Fishing up the North Island" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FINAL FOOTER AREA -->
+    <!-- BIBLIOGRAPHY SECTION (Updated with Annotated Citations & MLA Formatting) -->
+    <section id="bibliography" class="py-24 md:py-48 px-6 bg-black border-t border-white/5">
+        <div class="max-w-5xl mx-auto reveal">
+            <h2 class="text-3xl md:text-5xl serif italic mb-16 text-[#c5a059] text-center">Annotated Bibliography</h2>
+            
+            <div class="bib-container text-sm md:text-base font-light text-white/70">
+                
+                <div class="bib-entry">
+                    Assmann, Jan. <i>Cultural Memory and Early Civilization</i>. Cambridge University Press, 2011. <a href="https://doi.org/10.1017/CBO9780511996306" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    <span class="annotation">Jan Assmann argues that cultural memory is preserved through symbolic forms such as myth, ritual, and narrative, allowing societies to maintain continuity over centuries. He distinguishes cultural memory from everyday memory, emphasizing its durability and institutional preservation through texts, monuments, and traditions.</span>
+                </div>
+
+                <div class="bib-entry">
+                    Cameron, James, director. <i>Avatar</i>. 20th Century Fox, 2009. <a href="https://www.loc.gov/item/jots.200013705/" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    <span class="annotation">This film demonstrates how modern pop culture draws from mythic structures while expressing ecological and moral knowledge. The Na’vi’s spiritual relationship with their environment reflects real-world Indigenous myths that encode environmental ethics and sustainable behavior.</span>
+                </div>
+
+                <div class="bib-entry">
+                    Eliade, Mircea. <i>Myth and Reality</i>. Harper & Row, 1963. <a href="https://archive.org/details/mythreality00elia" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    <span class="annotation">Eliade argues that myths functions as a sacred narrative that preserves foundational cultural truths and provides models for human behavior. He explains that myths describe events believed to have occurred during a primitive time, and through ritual retelling, they allow societies to reconnect with meaningful origins.</span>
+                </div>
+
+                <div class="bib-entry">
+                    Lévi-Strauss, Claude. "The Structural Study of Myth." <i>The Journal of American Folklore</i>, vol. 68, no. 270, 1955, pp. 428–444. <a href="https://www.jstor.org/stable/536768" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    <span class="annotation">Lévi-Strauss argues that myths function as cognitive structures that help societies resolve contradictions. He analyzes myths as systems of symbolic relationships rather than literal explanations, showing how recurring narrative patterns help humans organize knowledge and make sense of uncertainty.</span>
+                </div>
+
+                <div class="bib-entry">
+                    <i>Popol Vuh</i>. Translated by Allen J. Christenson, University of Oklahoma Press, 2007.
+                    <span class="annotation">Recorded in the 16th century but originating in oral Maya tradition, it encodes agricultural knowledge, cosmology, and ethical principles, illustrating how myth preserved ecological and cultural knowledge across generations.</span>
+                </div>
+
+                <div class="bib-entry">
+                    <i>The Epic of Gilgamesh</i>. Translated by Andrew George, Penguin Classics, 2003.
+                    <span class="annotation">This Mesopotamian epic recounts King Gilgamesh’s journey to understand mortality. It encodes psychological and existential knowledge, showing how myth helped societies confront mortality before scientific explanations existed.</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="py-24 px-6 border-t border-white/5 text-center">
         <div class="max-w-3xl mx-auto reveal">
             <h4 class="text-2xl md:text-4xl serif italic mb-12 opacity-80">"Myth is part of a longer continuum of human efforts to survive."</h4>
-            <!-- Updated year to 2026 -->
             <p class="text-[10px] uppercase tracking-[0.5em] opacity-30 mt-12">Hanna Bullen &bull; 2026</p>
         </div>
     </footer>
@@ -258,16 +325,14 @@
                 </svg>
             </button>
         </div>
-        
         <div id="chat-messages" class="flex-1 overflow-y-auto p-6 flex flex-col custom-scrollbar">
             <div class="chat-bubble curator-bubble">
-                Welcome to the exhibit. I am an AI assistant grounded in Hanna Bullen's research. Do you have questions about how these ancient myths served as systems of knowledge?
+                Welcome to the exhibit. I am grounded in Hanna Bullen's research. How can I assist your investigation into mythic knowledge?
             </div>
         </div>
-
         <div class="p-4 border-t border-white/10 bg-zinc-950">
             <div class="relative">
-                <textarea id="user-input" rows="2" placeholder="Ask a question..." 
+                <textarea id="user-input" rows="2" placeholder="Ask about the artifacts..." 
                     class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 pr-12 text-sm focus:outline-none focus:border-[#c5a059] transition-colors resize-none"></textarea>
                 <button id="send-btn" class="absolute right-3 bottom-3 text-[#c5a059] hover:text-white transition-colors disabled:opacity-30">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -275,21 +340,16 @@
                     </svg>
                 </button>
             </div>
-            <p class="text-[9px] text-white/30 text-center mt-2 uppercase tracking-tighter">Powered by Gemini 2.5 Flash</p>
         </div>
     </div>
 
     <button id="open-curator" class="fixed bottom-8 right-8 z-[90] bg-zinc-900 border border-[#c5a059]/40 p-4 rounded-full shadow-2xl hover:bg-zinc-800 transition-all group reveal active">
-        <div class="flex items-center space-x-3">
-            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[#c5a059] hidden group-hover:block transition-all">Consult Curator</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c5a059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c5a059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
     </button>
 
     <script>
-        // Reveal Logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
@@ -297,18 +357,8 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Nav Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) target.scrollIntoView({ behavior: 'smooth' });
-                else window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-
         // AI CURATOR LOGIC
-        const apiKey = ""; // Provisioned at runtime
+        const apiKey = ""; 
         const panel = document.getElementById('ai-curator-panel');
         const openBtn = document.getElementById('open-curator');
         const closeBtn = document.getElementById('close-curator');
@@ -319,16 +369,14 @@
         openBtn.addEventListener('click', () => panel.classList.add('open'));
         closeBtn.addEventListener('click', () => panel.classList.remove('open'));
 
-        const systemPrompt = `You are the AI Curator for Hanna Bullen's exhibition "Myth as Knowledge" in February 2026. 
-        Your goal is to help visitors understand that myth is not the opposite of truth, but a 'cultural technology' for preserving survival knowledge.
-        
-        KEY KNOWLEDGE BASE:
-        1. Japan (Aneyoshi Stones): Ancient monuments warning against building below a certain point. Villages that followed them survived the 2011 tsunami.
-        2. Greece (Deucalion & Pyrrha): A myth encoding recurring flood cycles and resilience.
-        3. Māori (Māui): The myth of fishing up the North Island encodes geological (volcanic) and ecological (fishing/hazard) understanding.
-        4. Scholars: Mircea Eliade (foundational truths) and Lévi-Strauss (myth as logic).
-        
-        STYLE: Sophisticated, academic yet accessible, calm, and insightful. Keep responses concise (2-3 sentences max unless asked to elaborate). Do not mention you are an AI unless asked.`;
+        const systemPrompt = `You are the AI Curator for Hanna Bullen's exhibition "Myth as Knowledge" in March 2026. 
+        KNOWLEDGE BASE:
+        1. Japan: Aneyoshi Tsunami Stones warn: "Do not build homes below this point." Proven survival tech.
+        2. Greece: Deucalion & Pyrrha survived flood. Encodes resilience and environmental memory.
+        3. Māori: Māui fished up the North Island (Te Ika-a-Māui). Encodes geological and ecological knowledge.
+        4. Scholars: Eliade (foundational truths) and Lévi-Strauss (myth as logic).
+        5. Epistemology: Grounded in memory preservation, experience, continuity, and the spirit realm.
+        STYLE: Academic, concise, helpful guide.`;
 
         async function callGemini(query) {
             let delay = 1000;
@@ -342,12 +390,11 @@
                             systemInstruction: { parts: [{ text: systemPrompt }] }
                         })
                     });
-                    
-                    if (!response.ok) throw new Error('API request failed');
+                    if (!response.ok) throw new Error();
                     const data = await response.json();
                     return data.candidates?.[0]?.content?.parts?.[0]?.text;
                 } catch (err) {
-                    if (i === 4) throw err;
+                    if (i === 4) return "The curator is currently unavailable.";
                     await new Promise(r => setTimeout(r, delay));
                     delay *= 2;
                 }
@@ -357,49 +404,24 @@
         async function handleSend() {
             const text = userInput.value.trim();
             if (!text) return;
-
-            // User Message
             const userDiv = document.createElement('div');
             userDiv.className = 'chat-bubble user-bubble';
             userDiv.textContent = text;
             chatContainer.appendChild(userDiv);
             userInput.value = '';
             chatContainer.scrollTop = chatContainer.scrollHeight;
-
-            // Loading state
             sendBtn.disabled = true;
-            const loadingDiv = document.createElement('div');
-            loadingDiv.className = 'chat-bubble curator-bubble opacity-50';
-            loadingDiv.textContent = 'Curating response...';
-            chatContainer.appendChild(loadingDiv);
-
-            try {
-                const aiResponse = await callGemini(text);
-                chatContainer.removeChild(loadingDiv);
-                
-                const curatorDiv = document.createElement('div');
-                curatorDiv.className = 'chat-bubble curator-bubble';
-                curatorDiv.textContent = aiResponse;
-                chatContainer.appendChild(curatorDiv);
-            } catch (error) {
-                chatContainer.removeChild(loadingDiv);
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'chat-bubble curator-bubble text-red-400';
-                errorDiv.textContent = "The curator is currently indisposed. Please try again in a moment.";
-                chatContainer.appendChild(errorDiv);
-            } finally {
-                sendBtn.disabled = false;
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            }
+            const aiResponse = await callGemini(text);
+            const curatorDiv = document.createElement('div');
+            curatorDiv.className = 'chat-bubble curator-bubble';
+            curatorDiv.textContent = aiResponse;
+            chatContainer.appendChild(curatorDiv);
+            sendBtn.disabled = false;
+            chatContainer.scrollTop = chatContainer.scrollHeight;
         }
 
         sendBtn.addEventListener('click', handleSend);
-        userInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                handleSend();
-            }
-        });
+        userInput.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } });
     </script>
 </body>
 </html>
