@@ -75,6 +75,16 @@
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
+        .bib-entry a {
+            color: var(--gold);
+            opacity: 0.7;
+            word-break: break-all;
+            transition: opacity 0.3s ease;
+        }
+        .bib-entry a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
 
         #ai-curator-panel {
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,7 +122,7 @@
             <span class="text-sm md:text-lg font-light tracking-[0.2em] uppercase serif italic">Myth as Knowledge</span>
             <span class="text-[8px] md:text-[10px] tracking-[0.4em] uppercase opacity-70 mt-1">Hanna Bullen</span>
         </a>
-        <div class="hidden md:flex space-x-10 text-[9px] uppercase tracking-[0.3em] font-medium pointer-events-auto pt-2">
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.4em] font-medium pointer-events-auto pt-2">
             <a href="#introduction" class="nav-link">Introduction</a>
             <a href="#artifact-japan" class="nav-link">Japan</a>
             <a href="#artifact-greece" class="nav-link">Greece</a>
@@ -135,9 +145,6 @@
             <p class="text-sm md:text-lg font-light opacity-60 max-w-xl mx-auto tracking-wide italic">
                 Reconsidering myth as a cultural technology for environmental preservation.
             </p>
-            <div class="mt-20">
-                <div class="w-[1px] h-16 bg-white/20 mx-auto"></div>
-            </div>
         </div>
     </header>
 
@@ -146,8 +153,8 @@
         <div class="max-w-4xl mx-auto">
             <div class="reveal">
                 <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-10">I. The Modern Divide</p>
-                <h2 class="text-3xl md:text-5xl mb-16 serif italic leading-tight text-white/95">
-                    "In the modern Western world, myth is often understood as the opposite of truth."
+                <h2 class="text-3xl md:text-5xl mb-16 serif italic leading-tight text-white/95 text-center">
+                    "Myth is not the opposite of truth, but a system for its preservation."
                 </h2>
             </div>
 
@@ -174,10 +181,13 @@
                 <p class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-10 text-center">II. Epistemology & Continuity</p>
                 <div class="max-w-2xl mx-auto space-y-12 text-lg md:text-xl font-light leading-relaxed text-white/80">
                     <p>
-                        Scholars across disciplines have emphasized the importance of myth as a legitimate form of knowledge preservation. Historian of religion <span class="text-white font-normal">Mircea Eliade</span> argued that myth provides a framework through which societies understand reality and their place within it, preserving foundational truths across time. Anthropologist <span class="text-white font-normal">Claude Lévi-Strauss</span> further demonstrated that myth operates as a system of logic, allowing cultures to organize and transmit complex relationships between humans and the natural world. Rather than being irrational, myth reflects a different epistemology, one grounded in <span class="text-white font-medium italic underline decoration-gold/50">memory preservation, experience, continuity, and the spirit realm.</span>
+                        Scholars across disciplines have emphasized the importance of myth as a legitimate form of knowledge preservation. Historian of religion <span class="text-white font-normal">Mircea Eliade</span> argued that myth provides a framework through which societies understand reality and their place within it, preserving foundational truths across time. Anthropologist <span class="text-white font-normal">Claude Lévi-Strauss</span> further demonstrated that myth operates as a system of logic, allowing cultures to organize and transmit complex relationships between humans and the natural world. 
+                    </p>
+                    <p class="italic text-white underline decoration-[#c5a059]/40 underline-offset-8">
+                        Rather than being irrational, myth reflects a different epistemology, one grounded in memory preservation, experience, continuity, and the spirit realm.
                     </p>
                     <p>
-                        This exhibit explores myth as an early system of knowledge preservation that existed before, and alongside, scientific rationalism. It examines how myth functioned not simply as storytelling, but as a cultural technology that encoded environmental understanding and ensured its survival across generations. By reconsidering myth through this lens, this exhibit invites viewers to question the modern assumption that rational science replaced myth entirely. Instead, myth can be understood as part of a longer continuum of human efforts to interpret, preserve, and survive within an ever-changing world.
+                        This exhibit explores myth as an early system of knowledge preservation that existed before, and alongside, scientific rationalism. It examines how myth functioned not simply as storytelling, but as a cultural technology that encoded environmental understanding and ensured its survival across generations.
                     </p>
                 </div>
             </div>
@@ -188,44 +198,47 @@
     <section id="artifact-japan" class="py-32 md:py-64 px-6 bg-zinc-950/40">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="reveal image-container order-2 lg:order-1">
-                <div class="relative group aspect-[4/5] overflow-hidden border border-white/5">
+                <div class="relative group aspect-[4/5] overflow-hidden border border-white/5 shadow-2xl">
                     <img src="image_f4219e.jpg" 
-                         onerror="this.src='https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=800'"
-                         alt="Tsunami Stone in Aneyoshi" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 border-b border-r border-[#c5a059]/40"></div>
+                         alt="Tsunami Stone in Aneyoshi" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
             <div class="reveal order-1 lg:order-2">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 01 | Aneyoshi, Japan</span>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 01 | Aneyoshi, Japan</span>
                 <h3 class="text-4xl md:text-6xl serif italic mb-8">The Tsunami Monument</h3>
                 <p class="text-xl font-light text-white/60 mb-8 italic">"Remember the calamity of the great tsunamis. Do not build any homes below this point."</p>
-                <p class="font-light leading-relaxed opacity-80 mb-10">
-                    A stone monument carved with a warning passed down for generations. The text "addresses" the viewer directly, functioning as a voice from the past rather than depicting a specific person. The stone dominates the frame, standing firmly against the landscape as a permanent authority on environmental survival.
-                </p>
-                <div class="pt-8 border-t border-white/10 flex space-x-12">
-                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Function</p><p class="text-xs font-light">Communal Memory</p></div>
-                    <div><p class="text-[10px] uppercase tracking-widest font-bold text-[#c5a059] mb-1">Medium</p><p class="text-xs font-light">Engraved Stone</p></div>
+                <div class="space-y-6 text-sm md:text-base font-light leading-relaxed opacity-80">
+                    <p>
+                        This monument stands as a physical manifestation of memory preservation, a silent sentinel that encodes a community’s survival logic into the landscape itself. By standing firmly against the natural environment without human figures, the object asserts an ancestral authority that outlasts individual lifetimes.
+                    </p>
+                    <p>
+                        This object proves that cultural memory can guide behavior more effectively than abstract scientific data; villages that obeyed these mythic markers survived the 2011 tsunami, while modern developments that ignored the 'voice from the past' were lost. It exemplifies the exhibit's central claim: myth functions as a durable technology for environmental survival where scientific hydrology was once absent.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CASE STUDY 02: GREECE (Flood Myth) -->
-    <section id="artifact-greece" class="relative py-48 md:py-80 px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="image_f4215c.jpg" 
-                 onerror="this.src='https://images.unsplash.com/photo-1510521212584-5553a9273c50?auto=format&fit=crop&q=80&w=2000'"
-                 class="w-full h-full object-cover opacity-30" alt="Deucalion and Pyrrha Survivors">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
-        </div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <section id="artifact-greece" class="relative py-48 md:py-80 px-6 overflow-hidden bg-black">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="reveal">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 02 | Ancient Greece</span>
-                <h3 class="text-5xl md:text-7xl serif italic mb-12">Deucalion & Pyrrha</h3>
-                <p class="text-lg md:text-2xl font-light italic leading-relaxed opacity-90 max-w-2xl mx-auto mb-16">
-                    "This myth preserved collective memory of flooding and renewal long before scientific geology existed. It transformed natural phenomenon into actionable knowledge, reinforcing human resilience."
-                </p>
-                <div class="w-px h-24 bg-[#c5a059]/40 mx-auto"></div>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 02 | Ancient Greece</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-12">Deucalion & Pyrrha</h3>
+                <div class="max-w-2xl mx-auto space-y-8 text-lg font-light italic leading-relaxed opacity-90 mb-16">
+                    <p>
+                        The Greek flood myth illustrates the interplay between environmental vulnerability and moral order. By centering figures against a devastated landscape, the narrative encodes the memory of recurring ecological catastrophes and human resilience.
+                    </p>
+                    <p>
+                        This narrative bridge between observation and meaning transforms raw environmental hazard into a structured system of logic. As argued in the introduction, such stories are not merely symbolic but function as legitimate epistemological tools for organizing knowledge about natural forces and societal continuity.
+                    </p>
+                </div>
+            </div>
+            <div class="reveal">
+                <div class="relative group aspect-video overflow-hidden shadow-2xl">
+                    <img src="image_f4215c.jpg" 
+                         class="w-full h-full object-cover" alt="Deucalion and Pyrrha Survivors">
+                </div>
             </div>
         </div>
     </section>
@@ -234,46 +247,46 @@
     <section id="artifact-maori" class="py-32 md:py-64 px-6 bg-zinc-950/20">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
             <div class="reveal lg:w-1/2">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Case Study 03 | Māori Tradition</span>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 03 | Māori Tradition</span>
                 <h3 class="text-4xl md:text-6xl serif italic mb-8">Māui & the Great Catch</h3>
-                <p class="font-light leading-relaxed opacity-80 mb-10">
-                    The demigod Māui fishing up the North Island (Te Ika-a-Māui). Traditional Māori art highlights sacredness, motion, and drama. This story communicates practical knowledge about fishing, tides, and volcanic activity while reinforcing cultural values and social cohesion.
-                </p>
-                <div class="p-6 border border-[#c5a059]/20 bg-zinc-900/50 italic font-light text-sm">
-                    "Human imagination transforms natural phenomena into actionable knowledge, serving as behavioral guidance across generations."
+                <div class="space-y-6 text-sm md:text-base font-light leading-relaxed opacity-80">
+                    <p>
+                        Māui’s haul represents the synthesis of geological observation and imagination. The traditional artwork, focusing on sacred motion and ancestral presence, highlights how the 'spirit realm' is integrated into Māori environmental understanding.
+                    </p>
+                    <p>
+                        Imagination functions as a vital medium for transmitting ecological lessons—such as tides and volcanic activity—where scientific hydrology was historically absent. By encoding survival data into an entertaining story, the myth ensures that essential knowledge about hazards and sustainable fishing is respected and preserved across generations.
+                    </p>
                 </div>
             </div>
             <div class="reveal lg:w-1/2">
                 <div class="aspect-video bg-zinc-900 overflow-hidden relative group border border-white/5 shadow-2xl">
                     <img src="image_f4211e.jpg" 
-                         onerror="this.src='https://images.unsplash.com/photo-1544413660-299165566b1d?auto=format&fit=crop&q=80&w=1200'"
                          alt="Māui Fishing up the North Island" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BIBLIOGRAPHY SECTION (Standard MLA Formatting) -->
+    <!-- BIBLIOGRAPHY SECTION -->
     <section id="bibliography" class="py-24 md:py-48 px-6 bg-black border-t border-white/5">
         <div class="max-w-5xl mx-auto reveal">
-            <h2 class="text-3xl md:text-5xl serif italic mb-16 text-[#c5a059] text-center">Bibliography</h2>
+            <h2 class="text-3xl md:text-5xl serif italic text-[#c5a059] text-center mb-20">Bibliography</h2>
             
             <div class="bib-container text-sm md:text-base font-light text-white/70">
-                
                 <div class="bib-entry">
-                    Assmann, Jan. <i>Cultural Memory and Early Civilization</i>. Cambridge University Press, 2011. <a href="https://doi.org/10.1017/CBO9780511996306" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    Assmann, Jan. <i>Cultural Memory and Early Civilization</i>. Cambridge University Press, 2011. <a href="https://doi.org/10.1017/CBO9780511996306" target="_blank">https://doi.org/10.1017/CBO9780511996306</a>
                 </div>
 
                 <div class="bib-entry">
-                    Cameron, James, director. <i>Avatar</i>. 20th Century Fox, 2009. <a href="https://www.loc.gov/item/jots.200013705/" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    Cameron, James, director. <i>Avatar</i>. 20th Century Fox, 2009. <a href="https://www.loc.gov/item/jots.200013705/" target="_blank">https://www.loc.gov/item/jots.200013705/</a>
                 </div>
 
                 <div class="bib-entry">
-                    Eliade, Mircea. <i>Myth and Reality</i>. Harper & Row, 1963. <a href="https://archive.org/details/mythreality00elia" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    Eliade, Mircea. <i>Myth and Reality</i>. Harper & Row, 1963. <a href="https://archive.org/details/mythreality00elia" target="_blank">https://archive.org/details/mythreality00elia</a>
                 </div>
 
                 <div class="bib-entry">
-                    Lévi-Strauss, Claude. "The Structural Study of Myth." <i>The Journal of American Folklore</i>, vol. 68, no. 270, 1955, pp. 428–444. <a href="https://www.jstor.org/stable/536768" class="opacity-40 hover:opacity-100 ml-1 underline text-[10px]">Link</a>
+                    Lévi-Strauss, Claude. "The Structural Study of Myth." <i>The Journal of American Folklore</i>, vol. 68, no. 270, 1955, pp. 428–444. <a href="https://www.jstor.org/stable/536768" target="_blank">https://www.jstor.org/stable/536768</a>
                 </div>
 
                 <div class="bib-entry">
@@ -283,17 +296,13 @@
                 <div class="bib-entry">
                     <i>The Epic of Gilgamesh</i>. Translated by Andrew George, Penguin Classics, 2003.
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-24 px-6 border-t border-white/5 text-center">
-        <div class="max-w-3xl mx-auto reveal">
-            <h4 class="text-2xl md:text-4xl serif italic mb-12 opacity-80">"Myth is part of a longer continuum of human efforts to survive."</h4>
-            <p class="text-[10px] uppercase tracking-[0.5em] opacity-30 mt-12">Hanna Bullen &bull; 2026</p>
-        </div>
+    <footer class="py-24 px-6 border-t border-white/5 text-center text-[10px] uppercase tracking-[0.5em] opacity-40">
+        Hanna Bullen &bull; 2026
     </footer>
 
     <!-- AI CURATOR WIDGET -->
@@ -303,7 +312,7 @@
                 <h4 class="serif italic text-xl">Consult the Curator</h4>
                 <p class="text-[10px] uppercase tracking-widest text-[#c5a059]">Exhibition Assistant</p>
             </div>
-            <button id="close-curator" class="text-white/50 hover:text-white transition-colors">
+            <button id="close-curator" class="text-white/40 hover:text-white transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -311,7 +320,7 @@
         </div>
         <div id="chat-messages" class="flex-1 overflow-y-auto p-6 flex flex-col custom-scrollbar">
             <div class="chat-bubble curator-bubble">
-                Welcome to the exhibit. I am grounded in Hanna Bullen's research. How can I assist your investigation into mythic knowledge?
+                Welcome. I am grounded in Hanna Bullen's research. How can I assist your investigation into mythic knowledge?
             </div>
         </div>
         <div class="p-4 border-t border-white/10 bg-zinc-950">
