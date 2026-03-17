@@ -188,8 +188,9 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <div class="reveal image-container sticky top-32">
                 <div class="relative group aspect-[4/5] overflow-hidden border border-white/5 shadow-2xl">
-                    <img src="image_f4219e.jpg" 
-                         onerror="this.src='https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=1000'"
+                    <!-- IMAGE LOGIC: Uses web address for published view, falls back to local file names provided by you -->
+                    <img src="https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=1000" 
+                         onerror="this.src='image_f4219e.jpg'; this.classList.add('grayscale')"
                          alt="Tsunami Stone in Aneyoshi" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
@@ -197,7 +198,7 @@
                 <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 01</span>
                 <h3 class="text-4xl md:text-6xl serif italic mb-8">The Tsunami Monument of Aneyoshi</h3>
                 
-                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80">
+                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80 text-justify">
                     <p>
                         Positioned in coastal Japan after devastating tsunamis, this stone monument serves as a communal memory marker. In societies without modern scientific forecasting, these markers embedded survival knowledge into the physical landscape, intended for descendants who might forget past disasters. The stone’s sheer verticality and weathered texture assert a sense of permanence and authority, acting as a voice from the past commanding the environment and those who inhabit it.
                     </p>
@@ -216,7 +217,7 @@
                 <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 02</span>
                 <h3 class="text-4xl md:text-6xl serif italic mb-12">Deucalion and Pyrrha: Narrative Resilience</h3>
                 
-                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80">
+                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80 text-justify">
                     <p>
                         As described in Ovid's <i>Metamorphoses</i>, Deucalion and Pyrrha are the sole survivors of a great deluge intended to cleanse a corrupt world. This myth was consumed by Greek and Roman societies to explain recurring environmental catastrophes long before scientific geology or hydrology existed. The visual depiction centers the human figures as vulnerable, isolated bodies against a vast, chaotic background, reinforcing a theme of continuity where the natural world is controlled by forces larger than human reasoning.
                     </p>
@@ -227,8 +228,8 @@
             </div>
             <div class="reveal order-1 lg:order-2 sticky top-32">
                 <div class="relative group aspect-video overflow-hidden shadow-2xl">
-                    <img src="image_f4215c.jpg" 
-                         onerror="this.src='https://images.unsplash.com/photo-1510521212584-5553a9273c50?auto=format&fit=crop&q=80&w=1200'"
+                    <img src="https://images.unsplash.com/photo-1510521212584-5553a9273c50?auto=format&fit=crop&q=80&w=1200" 
+                         onerror="this.src='image_f4215c.jpg'"
                          class="w-full h-full object-cover" alt="Deucalion and Pyrrha Illustration">
                 </div>
             </div>
@@ -240,8 +241,8 @@
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-start">
             <div class="reveal lg:w-1/2 sticky top-32">
                 <div class="aspect-video bg-zinc-900 overflow-hidden relative group border border-white/5 shadow-2xl">
-                    <img src="image_f4211e.jpg" 
-                         onerror="this.src='https://images.unsplash.com/photo-1502472545331-643bb21a89ec?auto=format&fit=crop&q=80&w=1200'"
+                    <img src="https://images.unsplash.com/photo-1502472545331-643bb21a89ec?auto=format&fit=crop&q=80&w=1200" 
+                         onerror="this.src='image_f4211e.jpg'"
                          alt="Māui Fishing up the North Island" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
                 </div>
             </div>
@@ -249,7 +250,7 @@
                 <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 03</span>
                 <h3 class="text-4xl md:text-6xl serif italic mb-8">Māui and the Great Catch</h3>
                 
-                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80">
+                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80 text-justify">
                     <p>
                         Māori oral tradition recounts the demigod Māui fishing up the North Island (Te Ika-a-Māui) from the ocean floor. This narrative encodes vital geological knowledge about volcanic activity and oceanic tides, presented as a story of immense skill and divine interaction. Traditional Māori art often utilizes a vibrant palette and sacred motion to highlight these themes, illustrating an epistemology where humans are active participants in a living, spiritual landscape rather than separate observers.
                     </p>
