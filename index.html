@@ -63,7 +63,6 @@
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-        /* MLA Hanging Indent for Bibliography */
         .bib-container {
             max-width: 900px;
             margin: 0 auto;
@@ -74,16 +73,6 @@
             text-indent: -2em;
             margin-bottom: 1.5rem;
             line-height: 1.6;
-        }
-        .bib-entry a {
-            color: var(--gold);
-            opacity: 0.7;
-            word-break: break-all;
-            transition: opacity 0.3s ease;
-        }
-        .bib-entry a:hover {
-            opacity: 1;
-            text-decoration: underline;
         }
 
         #ai-curator-panel {
@@ -112,6 +101,9 @@
             align-self: flex-end;
             color: white;
         }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(197, 160, 89, 0.3); border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
@@ -122,7 +114,7 @@
             <span class="text-sm md:text-lg font-light tracking-[0.2em] uppercase serif italic">Myth as Knowledge</span>
             <span class="text-[8px] md:text-[10px] tracking-[0.4em] uppercase opacity-70 mt-1">Hanna Bullen</span>
         </a>
-        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.4em] font-medium pointer-events-auto pt-2">
+        <div class="hidden md:flex space-x-10 text-[9px] uppercase tracking-[0.3em] font-medium pointer-events-auto pt-2">
             <a href="#introduction" class="nav-link">Introduction</a>
             <a href="#artifact-japan" class="nav-link">Japan</a>
             <a href="#artifact-greece" class="nav-link">Greece</a>
@@ -148,7 +140,7 @@
         </div>
     </header>
 
-    <!-- INTRODUCTION SECTION (500 WORDS) -->
+    <!-- INTRODUCTION SECTION -->
     <section id="introduction" class="py-24 md:py-48 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="reveal">
@@ -172,7 +164,7 @@
                         Before the rise of scientific rationalism, many cultures understood reality through interconnected spiritual, ecological, and experiential systems. Rather than separating humans from nature, these worldviews positioned human life within a larger, living environment. 
                     </p>
                     <p>
-                        Myth served as a <span class="text-[#c5a059] italic">bridge</span> between observation and meaning, transforming environmental experience into narratives that could be remembered and transmitted across generations. These stories were not merely symbolic; they functioned as structured systems for organizing knowledge about natural forces, human vulnerability, and environmental patterns.
+                        Myth served as a bridge between observation and meaning, transforming environmental experience into narratives that could be remembered and transmitted across generations. These stories were not merely symbolic; they functioned as structured systems for organizing knowledge about natural forces, human vulnerability, and environmental patterns.
                     </p>
                 </div>
             </div>
@@ -186,9 +178,6 @@
                     <p class="italic text-white underline decoration-[#c5a059]/40 underline-offset-8">
                         Rather than being irrational, myth reflects a different epistemology, one grounded in memory preservation, experience, continuity, and the spirit realm.
                     </p>
-                    <p>
-                        This exhibit explores myth as an early system of knowledge preservation that existed before, and alongside, scientific rationalism. It examines how myth functioned not simply as storytelling, but as a cultural technology that encoded environmental understanding and ensured its survival across generations.
-                    </p>
                 </div>
             </div>
         </div>
@@ -196,23 +185,24 @@
 
     <!-- CASE STUDY 01: JAPAN (Tsunami Stone) -->
     <section id="artifact-japan" class="py-32 md:py-64 px-6 bg-zinc-950/40">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="reveal image-container order-2 lg:order-1">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div class="reveal image-container sticky top-32">
                 <div class="relative group aspect-[4/5] overflow-hidden border border-white/5 shadow-2xl">
                     <img src="image_f4219e.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1542364010-09e8636e053a?auto=format&fit=crop&q=80&w=1000'"
                          alt="Tsunami Stone in Aneyoshi" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
-            <div class="reveal order-1 lg:order-2">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 01 | Aneyoshi, Japan</span>
-                <h3 class="text-4xl md:text-6xl serif italic mb-8">The Tsunami Monument</h3>
-                <p class="text-xl font-light text-white/60 mb-8 italic">"Remember the calamity of the great tsunamis. Do not build any homes below this point."</p>
-                <div class="space-y-6 text-sm md:text-base font-light leading-relaxed opacity-80">
+            <div class="reveal">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 01</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-8">The Tsunami Monument of Aneyoshi</h3>
+                
+                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80">
                     <p>
-                        This monument stands as a physical manifestation of memory preservation, a silent sentinel that encodes a community’s survival logic into the landscape itself. By standing firmly against the natural environment without human figures, the object asserts an ancestral authority that outlasts individual lifetimes.
+                        Positioned in coastal Japan after devastating tsunamis, this stone monument serves as a communal memory marker. In societies without modern scientific forecasting, these markers embedded survival knowledge into the physical landscape, intended for descendants who might forget past disasters. The stone’s sheer verticality and weathered texture assert a sense of permanence and authority, acting as a voice from the past commanding the environment and those who inhabit it.
                     </p>
                     <p>
-                        This object proves that cultural memory can guide behavior more effectively than abstract scientific data; villages that obeyed these mythic markers survived the 2011 tsunami, while modern developments that ignored the 'voice from the past' were lost. It exemplifies the exhibit's central claim: myth functions as a durable technology for environmental survival where scientific hydrology was once absent.
+                        This object serves as a physical manifestation of memory preservation, proving that cultural memory can guide behavior more effectively than abstract scientific data alone. It directly supports the thesis that mythic markers function as a durable survival technology; in 2011, the villages that obeyed these stones survived, while modern science-based infrastructure often failed to prevent loss of life in newly developed areas below the markers. The monument encodes lived experience into an authoritative narrative that outlasts individual lifetimes.
                     </p>
                 </div>
             </div>
@@ -221,23 +211,25 @@
 
     <!-- CASE STUDY 02: GREECE (Flood Myth) -->
     <section id="artifact-greece" class="relative py-48 md:py-80 px-6 overflow-hidden bg-black">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="reveal">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 02 | Ancient Greece</span>
-                <h3 class="text-4xl md:text-6xl serif italic mb-12">Deucalion & Pyrrha</h3>
-                <div class="max-w-2xl mx-auto space-y-8 text-lg font-light italic leading-relaxed opacity-90 mb-16">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div class="reveal order-2 lg:order-1">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 02</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-12">Deucalion and Pyrrha: Narrative Resilience</h3>
+                
+                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80">
                     <p>
-                        The Greek flood myth illustrates the interplay between environmental vulnerability and moral order. By centering figures against a devastated landscape, the narrative encodes the memory of recurring ecological catastrophes and human resilience.
+                        As described in Ovid's <i>Metamorphoses</i>, Deucalion and Pyrrha are the sole survivors of a great deluge intended to cleanse a corrupt world. This myth was consumed by Greek and Roman societies to explain recurring environmental catastrophes long before scientific geology or hydrology existed. The visual depiction centers the human figures as vulnerable, isolated bodies against a vast, chaotic background, reinforcing a theme of continuity where the natural world is controlled by forces larger than human reasoning.
                     </p>
                     <p>
-                        This narrative bridge between observation and meaning transforms raw environmental hazard into a structured system of logic. As argued in the introduction, such stories are not merely symbolic but function as legitimate epistemological tools for organizing knowledge about natural forces and societal continuity.
+                        This narrative functions as a cognitive bridge between environmental observation and human meaning. By framing a flood as a divine event with specific rules for survival—centered on moral causality—the myth transforms a terrifying, random hazard into a structured system of logic. This process preserves foundational truths about disaster cycles and societal resilience across generations, effectively transforming raw environmental data into actionable cultural knowledge.
                     </p>
                 </div>
             </div>
-            <div class="reveal">
+            <div class="reveal order-1 lg:order-2 sticky top-32">
                 <div class="relative group aspect-video overflow-hidden shadow-2xl">
                     <img src="image_f4215c.jpg" 
-                         class="w-full h-full object-cover" alt="Deucalion and Pyrrha Survivors">
+                         onerror="this.src='https://images.unsplash.com/photo-1510521212584-5553a9273c50?auto=format&fit=crop&q=80&w=1200'"
+                         class="w-full h-full object-cover" alt="Deucalion and Pyrrha Illustration">
                 </div>
             </div>
         </div>
@@ -245,23 +237,25 @@
 
     <!-- CASE STUDY 03: MAORI (Maui Myth) -->
     <section id="artifact-maori" class="py-32 md:py-64 px-6 bg-zinc-950/20">
-        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
-            <div class="reveal lg:w-1/2">
-                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 03 | Māori Tradition</span>
-                <h3 class="text-4xl md:text-6xl serif italic mb-8">Māui & the Great Catch</h3>
-                <div class="space-y-6 text-sm md:text-base font-light leading-relaxed opacity-80">
-                    <p>
-                        Māui’s haul represents the synthesis of geological observation and imagination. The traditional artwork, focusing on sacred motion and ancestral presence, highlights how the 'spirit realm' is integrated into Māori environmental understanding.
-                    </p>
-                    <p>
-                        Imagination functions as a vital medium for transmitting ecological lessons—such as tides and volcanic activity—where scientific hydrology was historically absent. By encoding survival data into an entertaining story, the myth ensures that essential knowledge about hazards and sustainable fishing is respected and preserved across generations.
-                    </p>
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-start">
+            <div class="reveal lg:w-1/2 sticky top-32">
+                <div class="aspect-video bg-zinc-900 overflow-hidden relative group border border-white/5 shadow-2xl">
+                    <img src="image_f4211e.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1502472545331-643bb21a89ec?auto=format&fit=crop&q=80&w=1200'"
+                         alt="Māui Fishing up the North Island" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
                 </div>
             </div>
             <div class="reveal lg:w-1/2">
-                <div class="aspect-video bg-zinc-900 overflow-hidden relative group border border-white/5 shadow-2xl">
-                    <img src="image_f4211e.jpg" 
-                         alt="Māui Fishing up the North Island" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a059] font-bold mb-6 block">Artifact 03</span>
+                <h3 class="text-4xl md:text-6xl serif italic mb-8">Māui and the Great Catch</h3>
+                
+                <div class="space-y-8 text-lg font-light leading-relaxed text-white/80">
+                    <p>
+                        Māori oral tradition recounts the demigod Māui fishing up the North Island (Te Ika-a-Māui) from the ocean floor. This narrative encodes vital geological knowledge about volcanic activity and oceanic tides, presented as a story of immense skill and divine interaction. Traditional Māori art often utilizes a vibrant palette and sacred motion to highlight these themes, illustrating an epistemology where humans are active participants in a living, spiritual landscape rather than separate observers.
+                    </p>
+                    <p>
+                        This myth proves that imagination functions as a vital medium for transforming natural phenomena into actionable knowledge. By encoding geological hazards and sustainable practices into an entertaining and memorable story, the community ensures that essential survival data is respected and preserved. It establishes an ecological understanding within the spirit realm where abstract data alone would likely be forgotten over time, ensuring behavioral guidance is transmitted across generations.
+                    </p>
                 </div>
             </div>
         </div>
@@ -305,48 +299,38 @@
         Hanna Bullen &bull; 2026
     </footer>
 
-    <!-- AI CURATOR WIDGET -->
+    <!-- AI CURATOR SIDEBAR -->
     <div id="ai-curator-panel" class="fixed top-0 right-0 h-full w-full md:w-96 bg-zinc-900 z-[100] border-l border-white/10 flex flex-col shadow-2xl">
-        <div class="p-6 border-b border-white/5 flex justify-between items-center bg-zinc-950">
+        <div class="p-6 border-b border-white/5 bg-zinc-950 flex justify-between items-center">
             <div>
                 <h4 class="serif italic text-xl">Consult the Curator</h4>
                 <p class="text-[10px] uppercase tracking-widest text-[#c5a059]">Exhibition Assistant</p>
             </div>
             <button id="close-curator" class="text-white/40 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
         </div>
         <div id="chat-messages" class="flex-1 overflow-y-auto p-6 flex flex-col custom-scrollbar">
-            <div class="chat-bubble curator-bubble">
-                Welcome. I am grounded in Hanna Bullen's research. How can I assist your investigation into mythic knowledge?
-            </div>
+            <div class="chat-bubble curator-bubble">Welcome. I am grounded in Hanna Bullen's research. How can I assist your investigation into mythic knowledge?</div>
         </div>
         <div class="p-4 border-t border-white/10 bg-zinc-950">
             <div class="relative">
-                <textarea id="user-input" rows="2" placeholder="Ask about the artifacts..." 
-                    class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 pr-12 text-sm focus:outline-none focus:border-[#c5a059] transition-colors resize-none"></textarea>
+                <textarea id="user-input" rows="2" placeholder="Ask about the artifacts..." class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 pr-12 text-sm focus:outline-none focus:border-[#c5a059] transition-colors resize-none"></textarea>
                 <button id="send-btn" class="absolute right-3 bottom-3 text-[#c5a059] hover:text-white transition-colors disabled:opacity-30">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <button id="open-curator" class="fixed bottom-8 right-8 z-[90] bg-zinc-900 border border-[#c5a059]/40 p-4 rounded-full shadow-2xl hover:bg-zinc-800 transition-all group reveal active">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c5a059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-        </svg>
+    <!-- FLOATING BUTTON -->
+    <button id="open-curator" class="fixed bottom-8 right-8 z-[90] bg-zinc-900 border border-[#c5a059]/40 p-4 rounded-full shadow-2xl hover:bg-zinc-800 transition-all hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c5a059]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
     </button>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
@@ -359,8 +343,8 @@
         const userInput = document.getElementById('user-input');
         const sendBtn = document.getElementById('send-btn');
 
-        openBtn.addEventListener('click', () => panel.classList.add('open'));
-        closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+        openBtn.onclick = () => panel.classList.add('open');
+        closeBtn.onclick = () => panel.classList.remove('open');
 
         const systemPrompt = `You are the AI Curator for Hanna Bullen's exhibition "Myth as Knowledge" in March 2026. 
         KNOWLEDGE BASE:
